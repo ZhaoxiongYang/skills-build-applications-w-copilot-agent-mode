@@ -24,6 +24,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+# Add Codespace URL to allowed hosts
+ALLOWED_HOSTS += ['laughing-space-parakeet-p77xv7rxgr9396rx-8000.app.github.dev']
+
 
 # Application definition
 
