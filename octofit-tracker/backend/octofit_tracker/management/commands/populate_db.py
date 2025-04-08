@@ -16,21 +16,21 @@ class Command(BaseCommand):
 
         # Create users
         users = [
-            User(_id=ObjectId(), username='thundergod', email='thundergod@mhigh.edu', password='thundergodpassword'),
-            User(_id=ObjectId(), username='metalgeek', email='metalgeek@mhigh.edu', password='metalgeekpassword'),
-            User(_id=ObjectId(), username='zerocool', email='zerocool@mhigh.edu', password='zerocoolpassword'),
-            User(_id=ObjectId(), username='crashoverride', email='crashoverride@mhigh.edu', password='crashoverridepassword'),
-            User(_id=ObjectId(), username='sleeptoken', email='sleeptoken@mhigh.edu', password='sleeptokenpassword'),
+            User(_id=ObjectId(), username='thundergod', email='thundergod@mhigh.edu', password='password123'),
+            User(_id=ObjectId(), username='metalgeek', email='metalgeek@mhigh.edu', password='password123'),
+            User(_id=ObjectId(), username='zerocool', email='zerocool@mhigh.edu', password='password123'),
+            User(_id=ObjectId(), username='crashoverride', email='crashoverride@mhigh.edu', password='password123'),
+            User(_id=ObjectId(), username='sleeptoken', email='sleeptoken@mhigh.edu', password='password123'),
         ]
         User.objects.bulk_create(users)
 
         # Create teams
-        team_blue = Team(_id=ObjectId(), name='Blue Team')
-        team_gold = Team(_id=ObjectId(), name='Gold Team')
-        team_blue.save()
-        team_gold.save()
-        team_blue.members.add(*users[:3])
-        team_gold.members.add(*users[3:])
+        team1 = Team(_id=ObjectId(), name='Blue Team')
+        team2 = Team(_id=ObjectId(), name='Gold Team')
+        team1.save()
+        team2.save()
+        team1.members.add(users[0], users[1])
+        team2.members.add(users[2], users[3], users[4])
 
         # Create activities
         activities = [
