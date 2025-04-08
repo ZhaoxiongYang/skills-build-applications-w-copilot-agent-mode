@@ -28,6 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+REST_API_ENDPOINT_SUFFIX = '-8000.preview.app.github.dev'
+
 # Override the CODESPACE_NAME for testing purposes
 CODESPACE_NAME = "laughing-space-parakeet-p77xv7rxgr9396rx"
 
