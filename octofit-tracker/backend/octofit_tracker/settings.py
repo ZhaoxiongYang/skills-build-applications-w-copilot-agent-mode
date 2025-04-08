@@ -28,10 +28,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+# Override the CODESPACE_NAME for testing purposes
+CODESPACE_NAME = "laughing-space-parakeet-p77xv7rxgr9396rx"
+
 # Add the codespace Django REST API endpoint suffix to ALLOWED_HOSTS
-CODESPACE_NAME = os.getenv("CODESPACE_NAME")
 if CODESPACE_NAME:
     ALLOWED_HOSTS.append(f"{CODESPACE_NAME}-8000.preview.app.github.dev")
+
+# Add the specific codespace name to ALLOWED_HOSTS
+ALLOWED_HOSTS.append("laughing-space-parakeet-p77xv7rxgr9396rx-8000.preview.app.github.dev")
 
 
 # Application definition
