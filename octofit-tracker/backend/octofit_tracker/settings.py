@@ -56,6 +56,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "octofit_tracker.urls"
 
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
